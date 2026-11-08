@@ -1,0 +1,31 @@
+{
+  "name": "isms-typing-race",
+  "version": "1.0.0",
+  "description": "ICE 2307 exam revision: typing race, quiz and notes. Works offline.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "33.2.1",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "bn.isms.typingrace",
+    "productName": "ISMS Typing Race",
+    "files": [
+      "index.html",
+      "main.js",
+      "slides/**/*"
+    ],
+    "win": {
+      "target": "portable",
+      "signAndEditExecutable": false
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  },
+  "author": "ISMS revision"
+}
